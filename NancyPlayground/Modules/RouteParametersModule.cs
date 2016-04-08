@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Nancy;
+﻿using Nancy;
 
-namespace NancyPlayground
+namespace NancyPlayground.Modules
 {
-    public class CurrencyModule : NancyModule
+    public class RouteParametersModule : NancyModule
     {
-        public CurrencyModule()
+        public RouteParametersModule()
         {
-            Get["/currency/{thing}/{thing2}/{value}"] = parameters => "Currency"
+            Get["/parameters/route/{thing}/{thing2}/{value}"] = parameters => "Route Parameters"
                                                                       + ", thing: "  + parameters.thing
                                                                       + ", thing2: " + parameters.thing2
                                                                       + ", value: "  + parameters.value;
